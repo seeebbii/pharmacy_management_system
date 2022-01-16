@@ -8,6 +8,7 @@ dotenv.config();
 // import {router as employeeRoutes} from './routes/employee.routes';
 import employeeRoutes from './routes/employee.routes';
 import clientRoutes from './routes/client.routes'
+import pharmacaryRoutes from './routes/pharmacy.routes'
 
 
 app.use(cors(), (req, res, next) => {
@@ -24,3 +25,5 @@ app.listen(process.env.PORT, ()=> console.log(`Server running on port: ${process
 
 app.use('/api/employee', employeeRoutes);
 app.use('/api/client', clientRoutes);
+
+app.use('/api/pharmacy', pharmacaryRoutes);
