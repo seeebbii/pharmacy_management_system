@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "b8346f16-e07d-4ed5-8bba-31a1769c1c14",
+		"name": "pharmacy management system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hasee\",\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employee/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sigun",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"haseebzafar.dev@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"emp_name\": \"Haseeb Zafar\",\r\n    \"store_id\": 1,\r\n    \"gender\": \"M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employee/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "\"bearer asjdhnakjsdad",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/employee/fetch",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"fetch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/employee/fetch/9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"fetch",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "8080",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:{{port}}/api",
+			"type": "string"
+		}
+	]
+}
