@@ -9,6 +9,7 @@ dotenv.config();
 import employeeRoutes from './routes/employee.routes';
 import clientRoutes from './routes/client.routes'
 import pharmacaryRoutes from './routes/pharmacy.routes'
+import doctorRoutes from './routes/doctor.routes'
 
 
 app.use(cors(), (req, res, next) => {
@@ -27,3 +28,4 @@ app.use('/api/employee', employeeRoutes);
 app.use('/api/client', clientRoutes);
 
 app.use('/api/pharmacy', pharmacaryRoutes);
+app.use('/api/doctor', doctorRoutes);
